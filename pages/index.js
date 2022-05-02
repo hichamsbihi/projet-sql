@@ -6,7 +6,9 @@ import axios from "axios";
 
 export async function getStaticProps() {
   try {
-    const { data } = await axios.get(`${process.env.APP_DOMAIN}/api/movies/0`);
+    const { data } = await axios.get(
+      `https://projet-sql.herokuapp.com/api/movies/0`
+    );
     return { props: { ...data } };
   } catch (error) {
     console.error(error);
