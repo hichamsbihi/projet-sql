@@ -7,7 +7,7 @@ import axios from "axios";
 export async function getStaticProps() {
   try {
     const { data } = await axios.get(
-      `https://projet-sql.herokuapp.com/api/movies/0`
+      `https://projet-sql.vercel.app/api/movies/0`
     );
     return { props: { ...data } };
   } catch (error) {
